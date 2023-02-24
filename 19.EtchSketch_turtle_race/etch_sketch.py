@@ -29,6 +29,6 @@ screen.onkey(key="Up", fun=move_forwards)
 screen.onkey(key="Down", fun=move_backward)
 screen.onkey(key="Right", fun=turn_right)
 screen.onkey(key="Left", fun=turn_left)
-screen.onkey(key="C", fun=reset_screen)
+screen.onkey(key="c", fun=reset_screen)
 screen.exitonclick()
 
