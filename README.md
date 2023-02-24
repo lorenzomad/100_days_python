@@ -8,3 +8,4 @@ starting from day 15 intermediate
 17. Quiz game - completed
 18. Heirst dot painting - completed
 19. Etch a sketch and turtle race - completed
+20. snake game
