@@ -10,3 +10,4 @@ starting from day 15 intermediate
 19. Etch a sketch and turtle race - completed
 20. Snake game - completed
 21. Snake game - completed
+22. Pong game
