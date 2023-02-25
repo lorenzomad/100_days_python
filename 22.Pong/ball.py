@@ -18,6 +18,12 @@ class Ball(Turtle):
         super().__init__(shape = "circle")
         self.color("white")
         self.penup()
+        self.generate_ball()
+        self.game_is_on = True
+
+
+    def generate_ball(self):
+        """generates the ball"""
         #direction 0 =left 1 = right
         self.direction_x = random.randint(0,1)
         self.direction_y = random.randint(0,1)
@@ -64,15 +70,16 @@ class Ball(Turtle):
 
     def ball_passed(self):
         """checks the win condition and returns the winner"""
-        if self.xcor() <= -300:
+        if self.xcor() <= -400:
             self.winner = "right"
             return True
-        elif self.xcor() >= 300:
+        elif self.xcor() >= 400:
             self.winner = "left"
             return True
         return False
     
-
+    def game_off(self):
+        self.game_is_on = False
 
 
 
