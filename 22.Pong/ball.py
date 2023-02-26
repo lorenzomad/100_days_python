@@ -2,7 +2,6 @@ from turtle import Turtle
 import random
 
 #definition of constants
-MOVEDISTANCE = 3
 LEFT = 0
 RIGHT = 1
 UP = 0
@@ -25,9 +24,10 @@ class Ball(Turtle):
     def generate_ball(self):
         """generates the ball"""
         #direction 0 =left 1 = right
+        self.move_distance = 3
+        self.goto(0,0)
         self.direction_x = random.randint(0,1)
         self.direction_y = random.randint(0,1)
-        self.goto(0,0)
         self.change_direction()
 
     def change_direction(self):
@@ -46,7 +46,7 @@ class Ball(Turtle):
     def move_ball(self):
         """updates the position of the ball and checks the collisions 
         with walls """
-        self.forward(MOVEDISTANCE)
+        self.forward(self.move_distance)
         if self.ycor() >= 300:
             self.direction_y = DOWN
             self.change_direction()
@@ -61,11 +61,13 @@ class Ball(Turtle):
             if self.distance(segment) <=15:
                 self.direction_x = RIGHT
                 self.change_direction()
+                self.move_distance += 1
                 break
         for segment in right_pad.pad_segments:
             if self.distance(segment) <=15:
                 self.direction_x = LEFT
                 self.change_direction()
+                self.move_distance += 1
                 break
 
     def ball_passed(self):

@@ -2,7 +2,7 @@ from turtle import Turtle
 
 #definition of costants
 DIMENSION = 3
-MOVE_DISTANCE = 20
+MOVE_DISTANCE = 40
 UP = 90
 DOWN = 270
 
