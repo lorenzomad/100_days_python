@@ -9,5 +9,6 @@ starting from day 15 intermediate
 18. Heirst dot painting - completed
 19. Etch a sketch and turtle race - completed
 20. Snake game - completed
-21. Snake game - completed
+21. Snake game - completed in project 20
 22. Pong game - completed
+23. Turtle crossing
