@@ -12,13 +12,22 @@ class ScoreManager(Turtle):
         self.color("white")
         self.hideturtle()
         self.penup()
+        self.initialize_high_score()
         self.write_score()
+        
+    def initialize_high_score(self):
+        with open("high_score.txt") as data:
+            self.high_score = int(data.read()) 
 
+    def save_high_score(self, new_score):
+        """writes to file the new high score"""
+        with open("high_score.txt", 'w') as data:
+            data.write(str(self.score))
 
     def write_score(self):
         """writes the score to the screen"""
         self.clear()
-        self.write(f"Score: {self.score}", align= ALIGNMENT, font=FONT)
+        self.write(f"Score: {self.score}. High score: {self.high_score}", align= ALIGNMENT, font=FONT)
 
     def get_points(self):
         """adds the points to the score"""
@@ -29,3 +38,5 @@ class ScoreManager(Turtle):
         """shows the end value"""
         self.goto(0, 0)
         self.write(f"Game over! \nYour score was: {self.score}", align= ALIGNMENT, font=GAME_OVER_FONT)
+        if self.score > self.high_score:
+            self.save_high_score(self.score)
