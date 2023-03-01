@@ -12,5 +12,5 @@ starting from day 15 intermediate
 21. Snake game - completed in project 20
 22. Pong game - completed
 23. Turtle crossing - completed
-24. Automatic emails
-25. Snake game, save high score - completed
+24. Snake game, save high score - completed
+25. 
