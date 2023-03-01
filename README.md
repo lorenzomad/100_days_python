@@ -11,4 +11,4 @@ starting from day 15 intermediate
 20. Snake game - completed
 21. Snake game - completed in project 20
 22. Pong game - completed
-23. Turtle crossing
+23. Turtle crossing - completed
