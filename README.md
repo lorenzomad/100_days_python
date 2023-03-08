@@ -12,5 +12,5 @@ starting from day 15 intermediate
 21. Snake game - completed in project 20
 22. Pong game - completed
 23. Turtle crossing - completed
-24. mail merger & Snake game, save high score - completed in project 20 
-25. 
+24. mail merger - completed & Snake game, save high score - completed in project 20 
+25. US state guessing game - completed
