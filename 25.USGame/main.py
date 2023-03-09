@@ -28,10 +28,13 @@ turtle.shape(image)
 
 guessed_states = []
 
-while(len(guessed_states) <= 50 and guessed_states != ""):
+while len(guessed_states) <= 50:
     answer_state = get_answer()
-    
-    if answer_state == None:
+
+    if answer_state.lower() == "exit":
+        missing_states = [state for state in states_location.state.tolist() if state not in guessed_states]
+        missing_states_locations = pd.DataFrame(missing_states)
+        missing_states_locations.to_csv("states_to_learn.csv")
         break
     elif answer_state in states_location["state"].values and answer_state not in guessed_states:
         guessed_states.append(answer_state)
@@ -41,5 +44,6 @@ while(len(guessed_states) <= 50 and guessed_states != ""):
         write_state(answer_state, x_pos, y_pos)
 
 
-turtle.mainloop()
 
+
+turtle.mainloop()
