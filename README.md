@@ -14,3 +14,4 @@ starting from day 15 intermediate
 23. Turtle crossing - completed
 24. mail merger - completed & Snake game, save high score - completed in project 20 
 25. US state guessing game - completed
+26. Nato alphabet - completed
